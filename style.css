@@ -1,0 +1,77 @@
+ body {
+  background-color: #222;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+#board {
+  width: 480px;
+  height: 480px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  border: 3px solid #444;
+  user-select: none;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.square.highlight {
+  outline: 3px solid yellow;
+}
+
+.piece {
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 1.2em;
+  min-height: 1.4em;
+}
+
+#board.flipped {
+  transform: rotate(180deg);
+}
+
+#board.flipped .piece {
+  transform: rotate(180deg);
+}
